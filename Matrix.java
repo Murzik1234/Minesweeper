@@ -1,4 +1,3 @@
-package sweeper;
 
 class Matrix {
     private Box [] [] matrix;
