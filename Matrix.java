@@ -1,22 +1,23 @@
+package sweeper;
 
 class Matrix {
-    private Box [] [] matrix;
+    private Box [] [] field;
 
     Matrix (Box defaultBox) {
-        matrix = new Box [Ranges.getSize().x][Ranges.getSize().y];
+        field = new Box [Ranges.getSize().x][Ranges.getSize().y];
         for (Coord coord : Ranges.getAllCoords())
-            matrix [coord.x] [coord.y] = defaultBox;
+            field[coord.x] [coord.y] = defaultBox;
     }
 
     Box get (Coord coord) {
         if (Ranges.inRange (coord))
-            return matrix [coord.x] [coord.y];
+            return field[coord.x] [coord.y];
         return null;
     }
 
     void set (Coord coord, Box box) {
         if (Ranges.inRange (coord))
-            matrix [coord.x] [coord.y] = box;
+            field[coord.x] [coord.y] = box;
 
     }
 
